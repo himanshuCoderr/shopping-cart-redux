@@ -1,11 +1,19 @@
 
 import './App.css';
+import ProductList from './Components/ProductList';
+import CartList from './Components/CartList';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store}>
+      <div className="App">
         <h1>Building A Redux Shopping Cart</h1>
-    </div>
+        <ProductList />
+        <CartList />
+      </div>
+    </Provider>
   );
 }
 
